@@ -1,4 +1,4 @@
-﻿Build started 2013.01.19. 15:24:37.
+﻿Build started 2013.01.19. 15:28:02.
 Project "z:\uaf_pub\uaf_pub\uaf_pub\uaf_pub.vcxproj" on node 2 (build target(s)).
 InitializeBuildStatus:
   Creating "Debug\uaf_pub.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -18,4 +18,4 @@ Done Building Project "z:\uaf_pub\uaf_pub\uaf_pub\uaf_pub.vcxproj" (build target
 
 Build succeeded.
 
-Time Elapsed 00:00:02.04
+Time Elapsed 00:00:02.27
