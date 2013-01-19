@@ -35,43 +35,15 @@ public:
 };
 
 int main(){
-	A *arr0[100];
-	for(int i=0;i<100;i++){
-		arr0[i]=new A();
-		//printf("tmp%d at %p\n",i,arr0[i]);
-	} 
-	
 	A *a=new A();
-	
 	a->vF1();
-	
 	int size=sizeof(A);
 	
 	printf("Address of a: %p - Size: %d \n",a,size);
-	
-	for(int i=0;i<100;i++){
-		free(arr0[i]);
-		//printf("tmp%d freed\n",i);
-	}
-
 	free(a);
-	cout << "a freed" << endl;
 
-	int num=100000;
-	cout << "Number of allocations: ";
-	cin >> num;
-	void **arr=(void**)malloc(size*num);
-	for(int i=0;i<num;i++){
-		arr[i]=malloc(size);
-		memset(arr[i],0x41,size);
-		printf("%d. item allocated to: %p \n",i,arr[i]);
-		
-		if (arr[i]==a){
-			cout << "Memory reallocated! " << endl;
-		}
-	}
-
-	a->vF1();
+	void *p=malloc(size);
+	printf("Address of p: %p - Size: %d \n",p,size);
 
 	return 0;
 }
