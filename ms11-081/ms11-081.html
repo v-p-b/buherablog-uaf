@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function ivan()
+{
+var formobj, selobj, optobj;
+ selobj = document.getElementById("select1");
+ formobj = selobj.form;
+for(var i=0;i<5;i++) {
+ optobj = document.createElement('option');
+ optobj.text = "test";
+ selobj.add(optobj);
+ }
+selobj.innerText = "foo";
+ CollectGarbage();
+formobj.reset();
+}
+</script>
+</head>
+<body onload='ivan()'>
+<form method="post">
+<select id="select1">
+</select>
+</form>
+</body>
+</html>
